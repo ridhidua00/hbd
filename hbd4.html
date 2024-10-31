@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ishaan</title>
+    <style>
+        /* CSS Section */
+        body {
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .flower {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.postimg.cc/NMzvyHvg/flower.jpg'); /* Replace with a blooming flower image URL */
+            background-size: cover;
+            animation: bloom 5s infinite;
+            cursor: pointer; /* Change cursor to pointer for interactivity */
+        }
+
+        @keyframes bloom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .message {
+            display: none; /* Hide the message initially */
+            font-size: 2em;
+            color: #4a148c; /* Dark purple color */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="flower" id="flower"></div>
+        <div class="message" id="message">
+            <h1>Happy Birthday, ⭐️⭐️Ishaan⭐️⭐️!</h1>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Section
+        const flower = document.getElementById('flower');
+        const message = document.getElementById('message');
+
+        flower.addEventListener('click', () => {
+            flower.style.display = 'none'; // Hide the flower when clicked
+            message.style.display = 'block'; // Show the birthday message
+        });
+    </script>
+</body>
+</html>
